@@ -7,3 +7,5 @@ npm-debug.log
 .env
 
 .package-lock.json
+
+.ds_store
