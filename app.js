@@ -5,20 +5,11 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
-const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
 
-mongoose
-  .connect("mongodb://localhost/ironhack-project2", { useNewUrlParser: true })
-  .then((x) => {
-    console.log(
-      `Connected to Mongo! Database name: "${x.connections[0].name}"`
-    );
-  })
-  .catch((err) => {
-    console.error("Error connecting to mongo", err);
-  });
+// require database configuration
+require("./configs/db.config");
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
