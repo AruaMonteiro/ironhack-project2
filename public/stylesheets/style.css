@@ -1,6 +1,175 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font-family: "Kumbh Sans", sans-serif;
+}
 
-a {
-  color: #00B7FF; }
+/*a {
+  color: #00B7FF; }*/
+
+hr {
+  color: #264653;
+}
+
+p{
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h1{
+  color: #264653;
+  align-items: center;
+  text-align: justify;
+  align-content: center;
+  font-weight: bolder;
+  padding-top: 40px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+}
+
+.top{
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: right;
+  color: #fff;
+  padding: 10px;
+}
+
+/*NAVBAR*/
+
+.navbar {
+    background-color: #264653;
+    color: white;
+    font-family: "Kumbh Sans", sans-serif;
+  }
+
+.navbar a{
+  color: white;
+}
+
+/*INICIAL*/
+
+.primeira{
+  background-color: #2A9D8F;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
+}
+
+.example_b {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #264653;   /*#60a3bc;*/
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.example_b:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+} 
+
+
+/*COMO FUNCIONA SECTION*/
+
+/* Container holding the image and the text Como Funciona */
+
+.comofunciona{
+  background-color: #E9C46A;
+}
+
+.container-funciona {
+  position: relative;
+  text-align: center;
+  word-spacing: 3px;
+  color: black;
+  background-color: #E9C46A;
+  padding: 200px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Centered text Como Funciona */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  text-align: justify;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/*CONTATO SECTION*/
+
+.contato{
+  background-color: #F4A261;
+}
+form{
+  padding: 20px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+/*QUEM SOMOS*/
+
+.quemsomos{
+  background-color: #E76F51;
+}
+
+.containerquem{
+  padding: 50px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.projeto{
+  padding: 30px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.tituloquem{
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+
+
+
+/*FOOTER*/
+
+footer{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.centro{
+  text-align: center;
+  background-color: #264653;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+  /*REFERENCES:
+  CHARCOAL: #264653;
+  PERSIAN GREEN: #2A9D8F
+  ORANGE YELLOW CRAYOLA: #E9C46A
+  SANDY BROWN: #F4A261
+  BURNT SIENNA: #E76F51
