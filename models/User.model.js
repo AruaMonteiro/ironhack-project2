@@ -5,6 +5,7 @@ const userSchema = new Schema(
     name: {
       type: String,
       trim: true,
+      required: [true, "Name is required."],
     },
     email: {
       type: String,
@@ -31,6 +32,10 @@ const userSchema = new Schema(
     phone: {
       type: String,
       minlength: 8,
+    },
+    image: {
+      type: String,
+      default: "./images/marmita.jpeg",
     },
     category: [String],
   },

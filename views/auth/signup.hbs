@@ -1,0 +1,51 @@
+<div class='container pb-5 w-50'> 
+<form action="/signup" method="POST">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" name="name">
+  </div>
+  
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email">
+  </div>
+  
+  
+  <div class="form-group">
+    <label>Senha</label>
+    <input type="password" name="password">
+  </div>
+  
+  
+  <div class="form-group">
+    <label>Região</label>
+    <input type="text" name="region">
+  </div>
+  
+
+  <div class="form-group">
+    <label>Site (ou Instagram ou Facebook)</label>
+    <input type="text" name="site">
+  </div>
+  
+
+  <div class="form-group">
+    <label>Telefone/WhatsApp </label>
+    <input type="text" name="phone">  
+  </div>
+
+
+  <div class="form-group">
+    <label>Categoria(s) da sua marmita (fit,vegetariana,lanches,etc)</label>
+    <input type="text" name="category">
+  </div>
+  
+
+  <button type="submit" class="btn btn-outline-dark">Salvar</button>
+
+  {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+  
+</form>
+</div>
