@@ -9,11 +9,11 @@ hr {
   color: #264653;
 }
 
-p{
+p {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-h1{
+h1 {
   color: #264653;
   align-items: center;
   text-align: justify;
@@ -24,7 +24,7 @@ h1{
   font-weight: bold;
 }
 
-.top{
+.top {
   font-family: "Kumbh Sans", sans-serif;
   text-align: right;
   color: #fff;
@@ -34,19 +34,19 @@ h1{
 /*NAVBAR*/
 
 .navbar {
-    background-color: #264653;
-    color: white;
-    font-family: "Kumbh Sans", sans-serif;
-  }
+  background-color: #264653;
+  color: white;
+  font-family: "Kumbh Sans", sans-serif;
+}
 
-.navbar a{
+.navbar a {
   color: white;
 }
 
 /*INICIAL*/
 
-.primeira{
-  background-color: #2A9D8F;
+.primeira {
+  background-color: #2a9d8f;
   padding-top: 200px;
   padding-bottom: 200px;
   align-items: center;
@@ -56,7 +56,7 @@ h1{
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #264653;   /*#60a3bc;*/
+  background: #264653; /*#60a3bc;*/
   padding: 20px;
   border-radius: 50px;
   display: inline-block;
@@ -66,19 +66,18 @@ h1{
 }
 
 .example_b:hover {
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.4s ease 0s;
-} 
-
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
 
 /*COMO FUNCIONA SECTION*/
 
 /* Container holding the image and the text Como Funciona */
 
-.comofunciona{
-  background-color: #E9C46A;
+.comofunciona {
+  background-color: #e9c46a;
 }
 
 .container-funciona {
@@ -86,7 +85,7 @@ h1{
   text-align: center;
   word-spacing: 3px;
   color: black;
-  background-color: #E9C46A;
+  background-color: #e9c46a;
   padding: 200px;
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -104,10 +103,10 @@ h1{
 
 /*CONTATO SECTION*/
 
-.contato{
-  background-color: #F4A261;
+.contato {
+  background-color: #f4a261;
 }
-form{
+form {
   padding: 20px;
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -128,57 +127,249 @@ a:active {
   text-decoration: none;
 }
 
-
 /*QUEM SOMOS*/
 
-.quemsomos{
-  background-color: #E76F51;
+.quemsomos {
+  background-color: #e76f51;
 }
 
-.containerquem{
+.containerquem {
   padding: 50px;
   font-family: "Kumbh Sans", sans-serif;
 }
 
-.projeto{
+.projeto {
   padding: 30px;
   font-family: "Kumbh Sans", sans-serif;
 }
 
-.tituloquem{
+.tituloquem {
   padding-top: 20px;
   text-align: center;
   font-family: "Kumbh Sans", sans-serif;
 }
 
-/*PAG. MARMITAS*/
+/*RESTAURANTES*/
 
-.marmitastitle{
-  background-color: #2A9D8F;
+.marmitastitle {
+  background-color: #2a9d8f;
   padding-top: 50px;
   padding-bottom: 200px;
   align-items: center;
 }
 
+.restaurantes {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #2a9d8f;
+}
+.cardzinho {
+  font-family: "Kumbh Sans", sans-serif;
+  /*background-color: #2A9D8F;*/
+}
 
+/*body
+{
+  background-color:#2A9D8F;
+  font-family: "Kumbh Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}*/
 
+/* *
+{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+h5 {
+  margin: 0px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.center {
+  /* height:100vh; */
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /*align-items: center;*/
+}
+
+/* End Non-Essential  */
+
+.property-card {
+  height: 18em;
+  width: 14em;
+  margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical; /*vertical*/
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column; /*column, abaixo tbm*/
+  flex-direction: column;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 40px; /*16*/
+  overflow: hidden;
+  -webkit-box-shadow: 10px 10px 20px #e1e1e3, -10px -10px 20px #ffffff;
+  box-shadow: 10px 10px 20px #e1e1e3, -10px -10px 20px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image {
+  height: 6em;
+  width: 14em;
+  padding: 1em 2em;
+  position: Absolute;
+  top: 0px;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /*background-image:url({{this.image}});*/
+  /*background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description {
+  background-color: transparent; /*ffff*/
+  height: 12em;
+  width: 14em;
+  position: absolute;
+  bottom: 0em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+/* Social Icons */
+
+.property-social-icons {
+  width: 1em;
+  height: 1em;
+  background-color: #264653;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description {
+  height: 0em;
+  padding: 0px 1em;
+}
+.property-card:hover .property-image {
+  height: 18em;
+}
+
+.property-card:hover .property-social-icons {
+  background-color: #264653; /*white*/
+}
+
+.property-card:hover .property-social-icons:hover {
+  background-color: #264653;
+  cursor: pointer;
+}
+
+/* Optional
+
+.property-image-title
+{
+text-align:center;
+position:Relative;
+top:30%;
+opacity:0;
+transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+color:black;
+font-size:1.2em;
+}
+
+.property-card:hover .property-image-title
+{
+opacity:1;
+}
+
+*/
 
 /*FOOTER*/
 
-footer{
+footer {
   padding-top: 20px;
   padding-bottom: 10px;
 }
 
-.centro{
+.centro {
   text-align: center;
   background-color: #264653;
   font-family: "Kumbh Sans", sans-serif;
 }
 
-  /*REFERENCES:
+/*SEARCH BAR - RESTAURANTS*/
+
+/*body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}*/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #e9c46a;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #264653;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #e9c46a;
+  background: #e9c46a;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*REFERENCES:
   CHARCOAL: #264653;
   PERSIAN GREEN: #2A9D8F
   ORANGE YELLOW CRAYOLA: #E9C46A
   SANDY BROWN: #F4A261
-  BURNT SIENNA: #E76F51
+  BURNT SIENNA: #E76F51*/
