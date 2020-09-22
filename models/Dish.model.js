@@ -14,7 +14,7 @@ const dishSchema = new Schema(
     },
     image: {
       type: String,
-      default: "./images/marmita.jpeg",
+      default: "/images/marmita.jpg",
     },
     description: String,
     userId: mongoose.ObjectId,

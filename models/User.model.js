@@ -35,9 +35,10 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "./images/marmita.jpeg",
+      default: "/images/marmita.jpg",
     },
     category: [String],
+    description: { type: String, default: "Insira a descrição do seu restaurante aqui" },
   },
   {
     timestamps: true,
