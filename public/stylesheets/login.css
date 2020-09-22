@@ -112,6 +112,34 @@
   border: 2px solid;
 }
 
+/* ---------- SignUp Form ---------- */
+.login-form .page {
+  display: none;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.login-form .show-page {
+  display: block;
+}
+
+.page .btn-signup {
+  display: block;
+  height: 80px;
+  width: 150px;
+  margin: 40px auto;
+  background-color: #e76f51;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.btn-signup:hover {
+  opacity: 0.85;
+}
+
 /* Gambiarra para sobrescrever o estilo do autocomplete do chrome! */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
