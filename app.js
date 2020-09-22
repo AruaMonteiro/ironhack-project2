@@ -12,11 +12,15 @@ const path = require("path");
 require("./configs/db.config");
 
 const app_name = require("./package.json").name;
-const debug = require("debug")(
-  `${app_name}:${path.basename(__filename).split(".")[0]}`
-);
+const debug = require("debug")(`${app_name}:${path.basename(__filename).split(".")[0]}`);
 
 const app = express();
+
+// Session configuration
+require("./configs/session.config")(app);
+
+// Passport configuration
+require("./configs/passport.config")(app);
 
 // Middleware Setup
 app.use(logger("dev"));
@@ -40,9 +44,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
-app.locals.title = "Iron Quentinha";
+app.locals.title = "Express - Generated with IronGenerator";
 
+// Routers
 const index = require("./routes/index");
+const authRouter = require("./routes/auth.routes");
+
+// Routes middleware
 app.use("/", index);
+app.use("/", authRouter);
 
 module.exports = app;

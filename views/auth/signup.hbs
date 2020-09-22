@@ -1,0 +1,129 @@
+{{!-- <div class='container pb-5 w-50'> 
+<form action="/signup" method="POST">
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" name="name">
+  </div>
+  
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email">
+  </div>
+  
+  
+  <div class="form-group">
+    <label>Senha</label>
+    <input type="password" name="password">
+  </div>
+  
+  
+  <div class="form-group">
+    <label>Região</label>
+    <input type="text" name="region">
+  </div>
+  
+
+  <div class="form-group">
+    <label>Site (ou Instagram ou Facebook)</label>
+    <input type="text" name="site">
+  </div>
+  
+
+  <div class="form-group">
+    <label>Telefone/WhatsApp </label>
+    <input type="text" name="phone">  
+  </div>
+
+
+  <div class="form-group">
+    <label>Categoria(s) da sua marmita (fit,vegetariana,lanches,etc)</label>
+    <input type="text" name="category">
+  </div>
+  
+
+  <button type="submit" class="btn btn-outline-dark">Salvar</button>
+
+  {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
+  
+</form>
+</div> --}}
+
+
+<div class="login">
+  <form action="/signup" method="POST" class="login-form">
+    <h1>Cadastre-se</h1>
+    <div class="page show-page">
+      <div class="textb">
+        <input type="text" name="name" required>
+        <div class="placeholder">Nome</div>
+      </div>
+
+      <div class="textb">
+        <input type="text" name="email" required>
+        <div class="placeholder">Email</div>
+      </div>
+
+      <div class="textb">
+        <input type="password" name="password" required>
+        <div class="placeholder">Senha</div>
+        <div class="show-password fas fa-eye-slash"></div>
+      </div>
+
+      <button class="btn btn-signup btn-next" onclick="toggleShow()" type="button">Próximo</button>
+    </div>
+
+{{!-- Segunda etapa --}}
+
+    <div class="page">
+      <div class="textb">
+        <input type="text" name="region" required>
+        <div class="placeholder">Região</div>
+      </div>
+
+      <div class="textb">
+        <input type="text" name="site" required>
+        <div class="placeholder">Site</div>
+      </div>
+
+      <div class="textb">
+        <input type="text" name="phone" required>
+        <div class="placeholder">Telefone/WhatsApp</div>
+      </div>
+
+      <div class="textb">
+        <input type="text" name="category" required>
+        <div class="placeholder">Categoria(s)</div>
+      </div>
+
+      <button class="btn btn-signup" type="submit">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function toggleShow(){
+    const divs = document.querySelectorAll(".page");
+    divs.forEach((div) => {
+      if(div.classList.contains('show-page')){
+        div.classList.remove('show-page');
+      }else{
+        div.classList.add('show-page');
+      }
+    });
+  }
+  
+  const fields = document.querySelectorAll(".textb input");
+  document.querySelector(".show-password").addEventListener("click",function(){
+    if(this.classList[2] == "fa-eye-slash"){
+      this.classList.remove("fa-eye-slash");
+      this.classList.add("fa-eye");
+      fields[2].type = "text";
+    }else{
+      this.classList.remove("fa-eye");
+      this.classList.add("fa-eye-slash");
+      fields[2].type = "password";
+    }
+  });
+</script>

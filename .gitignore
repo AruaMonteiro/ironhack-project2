@@ -8,4 +8,4 @@ npm-debug.log
 
 .package-lock.json
 
-.ds_store
+.DS_Store
