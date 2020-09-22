@@ -1,0 +1,44 @@
+
+
+<!---Encontre sua Marmita--->
+		<div class="marmitastitle">
+				<center>
+				<h1 style="color: black; font-family: "Kumbh Sans", sans-serif;">
+					<center>Encontre Sua Marmita</center>
+				</h1>
+				<h6>
+					Encontre abaixo a lista de restaurantes já cadastrados. Utilize o campo de pesquisa para filtrar pelo tipo de comida que procura.
+				</h6>
+				</center>
+				<!--trocar pot search bar <p>
+                <div class="button_cont" align="center"><a class="example_b" href="add-website-here" target="_blank" rel="nofollow noopener">Encontre Sua Marmita!</a></div>
+				</p> -->
+		</div>
+
+<!-- Lista Restaurantes -->
+
+<div class="container mt-5">
+  <div class="row">
+
+    {{#each marmitas}}
+    <!--card-->
+    <div class="col-xs-12 col-sm-6 col-md-4 text-center mb-3">
+      <picture>
+        <img alt="{{this.name}}" src="{{this.image}}" />
+		<h4>{{this.name}}</h4>
+        <figcaption class="font-weight-bold">{{this.category}}</figcaption>
+        <!-- <a href="/movie/{{this._id}}">See more</a> -->
+      </picture>
+    </div>
+    {{/each}}
+
+  </div>
+</div>
+
+
+<!---FOOTER--->
+<footer class="centro"> 
+            <span><a href="https://github.com/AruaMonteiro/ironhack-project2" class="social" target="_blank"><i class="fab fa-github"></i> </a></span> 
+            <br>
+            <span class="final">Iron Quentinha  <i class="far fa-copyright"></i> 2020</span>
+</footer>
