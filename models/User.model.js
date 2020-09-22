@@ -35,7 +35,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "./images/marmita.jpeg",
+      default: "/images/marmita.jpg",
     },
     category: [String],
   },
