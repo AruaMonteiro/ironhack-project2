@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    {{> profileLeftMenu user}} 
+    
+    <div class="col-10">
+      <div class="container col-8">
+        <div class="mt-5"><a href="/add-dish" ><i class="fas fa-plus-circle"></i></a></div>
+        <table class="table table-bordered table-hover mt-3">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Editar</th>
+              <th scope="col">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each result}}
+              <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+                <td>R${{this.price}}</td>
+                <td><a href="/edit-dish/{{this._id}}"><i class="fas fa-edit"></i></a></td>
+                <td><a href="/delete-dish/{{this._id}}"><i class="fas fa-trash-alt"></i></a></td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

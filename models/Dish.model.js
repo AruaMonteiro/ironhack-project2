@@ -1,12 +1,11 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require("mongoose");
 
-const dishSchema = new Schema(
+const dishSchema = new mongoose.Schema(
   {
     name: {
       type: String,
       trim: true,
       required: [true, "Username is required."],
-      unique: true,
     },
     price: {
       type: Number,
@@ -14,7 +13,7 @@ const dishSchema = new Schema(
     },
     image: {
       type: String,
-      default: "/images/marmita.jpg",
+      default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600870552/photos/default.jpg",
     },
     description: String,
     userId: mongoose.ObjectId,
@@ -24,4 +23,4 @@ const dishSchema = new Schema(
   }
 );
 
-module.exports = model("Dish", dishSchema);
+module.exports = mongoose.model("Dish", dishSchema);

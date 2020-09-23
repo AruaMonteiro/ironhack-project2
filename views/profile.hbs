@@ -4,9 +4,9 @@
     
     <div class="col-10">
       <div class="container col-4">
-        <form action="/profile" method="POST">
+        <form action="/profile" method="POST" enctype="multipart/form-data">
           <div class="form-group">
-            <label label>Nome</label>
+            <label>Nome</label>
             <input type="text" name="name" value="{{this.name}}" class="form-control">
           </div>
           
@@ -48,14 +48,12 @@
 
           <div class="form-group">
             <label>Imagem</label>
-            <input type="file" class="form-control">
+            <input type="file" class="form-control-file" name="imageUrl">
+            <input type="text" name="existingImage" hidden value="{{this.image}}">
           </div>
           
 
           <button type="submit" class="btn btn-primary">Salvar</button>
-          {{#if errorMessage}}
-          {{> errorPartial errorMessage}}
-          {{/if}}
         </form>
       </div>
       

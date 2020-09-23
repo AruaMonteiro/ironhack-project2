@@ -3,6 +3,8 @@ const { deserializeUser } = require("passport");
 const router = express.Router();
 const User = require("../models/User.model");
 
+const fileUploader = require("../configs/cloudinary.config");
+
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
@@ -19,16 +21,20 @@ router.get("/marmitas", async (req, res, next) => {
 });
 
 router.get("/profile", (req, res) => {
-  console.log("SESSION => ", req.user);
-
   if (!req.user || !req.user._id) {
     return res.redirect("/login");
   }
   return res.render("profile", req.user);
 });
 
-router.post("/profile", async (req, res) => {
-  console.log(req.body);
+router.post("/profile", fileUploader.single("imageUrl"), async (req, res) => {
+  let image;
+  if (req.file) {
+    image = req.file.url;
+  } else {
+    image = req.body.existingImage;
+  }
+  console.log(req.file);
   try {
     const result = await User.updateOne(
       { _id: req.user.id },
