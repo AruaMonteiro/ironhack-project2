@@ -36,8 +36,20 @@ router.post("/profile", fileUploader.single("imageUrl"), async (req, res) => {
   }
   console.log(req.file);
   try {
-    const result = await User.updateOne({ _id: req.user.id }, { $set: req.body, image });
+    const result = await User.updateOne(
+      { _id: req.user.id },
+      { $set: req.body }
+    );
     res.redirect("/profile");
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+router.get("/detalhes/:id", async (req, res) => {
+  try {
+    const result = await User.findOne({ _id: req.params.id });
+    res.render("detalhes.hbs", result);
   } catch (error) {
     console.error(error);
   }

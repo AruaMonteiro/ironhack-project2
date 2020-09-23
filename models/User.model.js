@@ -38,7 +38,10 @@ const userSchema = new Schema(
       default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600870552/photos/default.jpg",
     },
     category: [String],
-    description: { type: String, default: "Insira a descrição do seu restaurante aqui" },
+    description: {
+      type: String,
+      default: "Insira a descrição do seu restaurante aqui",
+    },
   },
   {
     timestamps: true,

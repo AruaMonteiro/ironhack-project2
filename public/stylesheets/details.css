@@ -1,0 +1,225 @@
+/* DETALHES RESTAURANTE */
+
+/* * {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+} */
+
+.container-width {
+  width: 100%;
+  /* max-width: 1150px; */
+  /* margin: 0 auto; */
+}
+.flex-sect {
+  background-color: #f4a261;
+  /* padding: 70px 0; */
+  font-family: "Kumbh Sans", sans-serif;
+}
+.flex-title {
+  margin-bottom: 15px;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  color: #555;
+  padding: 5px;
+}
+.form {
+  border-radius: 20px;
+  border: 3px solid #264653;
+  /* padding: 20px 15px; */
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: transparent; /*rgba(0, 0, 0, 0.2);*/
+  margin-right: 30px;
+}
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 2px;
+  color: #264653;
+  background-color: #fff;
+  border: none;
+}
+.textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-radius: 2px;
+  color: #264653;
+  background-color: #fff;
+  border: none;
+}
+.label {
+  width: 100%;
+  display: block;
+}
+.button {
+  width: 50%;
+  margin: 15px 0;
+  background-color: #2a9d8f;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  padding: 7px;
+  font-size: 1em;
+  justify-content: center;
+  cursor: pointer;
+}
+#ifx49 {
+  display: block;
+  float: none;
+  text-transform: uppercase;
+  color: #264653;
+}
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.cell {
+  min-height: 75px;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+#i3m4 {
+  color: black;
+  width: 400px;
+  float: inline-end;
+  display: flex; /*block*/
+  position: relative;
+  padding-top: 20px;
+  border-radius: 40px;
+}
+/* #iqvl {
+  padding: 30px;
+} */
+#i2fdj {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+  background-color: transparent;
+  line-height: 1.5rem;
+}
+#i0ja {
+  /* height: 563.703px; */
+  margin-top: -30px;
+}
+
+#i96j {
+  margin-top: 40px;
+}
+
+#itagz {
+  padding: 10px;
+}
+/* @media (max-width: 768px) {
+  .row {
+    flex-wrap: wrap;
+  }
+} */
+
+.contatos {
+  color: black;
+}
+
+.contatos:hover {
+  color: black;
+}
+
+/*CARDAPIO*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container-width {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.flex-sect {
+  background-color: #fafafa;
+  padding: 100px 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.flex-title {
+  margin-bottom: 15px;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  color: #264653;
+  padding: 5px;
+}
+.flex-desc {
+  margin-bottom: 55px;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+}
+.cards {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.card {
+  background-color: white;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  font-weight: 100;
+  overflow: hidden;
+}
+.card:hover {
+  margin-top: -5px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  height: 155px;
+  background-image: url("//placehold.it/350x250/78c5d6/fff/image1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.card-header.ch2 {
+  background-image: url("//placehold.it/350x250/459ba8/fff/image2.jpg");
+}
+.card-header.ch3 {
+  background-image: url("//placehold.it/350x250/79c267/fff/image3.jpg");
+}
+.card-header.ch4 {
+  background-image: url("//placehold.it/350x250/c5d647/fff/image4.jpg");
+}
+.card-header.ch5 {
+  background-image: url("//placehold.it/350x250/f28c33/fff/image5.jpg");
+}
+.card-header.ch6 {
+  background-image: url("//placehold.it/350x250/e868a2/fff/image6.jpg");
+}
+.card-body {
+  padding: 15px 15px 5px 15px;
+  color: #555;
+}
+.card-title {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+.card-sub-title {
+  color: #b3b3b3;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+.card-desc {
+  font-size: 0.85rem;
+  line-height: 17px;
+}
