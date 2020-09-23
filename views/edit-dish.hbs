@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row">
+    {{> profileLeftMenu user}} 
+    
+    <div class="col-10">
+      <div class="container col-4">
+        <form action="/edit-dish/{{result._id}}" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" name="name" class="form-control" value="{{result.name}}">
+          </div>
+          
+          <div class="form-group">
+            <label>Preço</label>
+            <input type="number" name="price" class="form-control" value="{{result.price}}">
+          </div>
+
+          <div class="form-group">
+            <label>Descrição</label>
+            <textarea name="description" rows="3" cols="20" class="form-control">{{result.description}}</textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Imagem</label>
+            <input type="file" class="form-control-file" name="imageUrl">
+            <input type="text" name="existingImage" hidden value="{{result.image}}">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

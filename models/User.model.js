@@ -35,7 +35,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "/images/marmita.jpg",
+      default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600870552/photos/default.jpg",
     },
     category: [String],
     description: { type: String, default: "Insira a descrição do seu restaurante aqui" },
