@@ -29,7 +29,7 @@ router.post("/add-dish", fileUploader.single("imageUrl"), async (req, res) => {
   if (req.file) {
     image = req.file.url;
   } else {
-    image = "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600870552/photos/default.jpg";
+    image = "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899936/photos/default-marmita.jpg";
   }
 
   try {

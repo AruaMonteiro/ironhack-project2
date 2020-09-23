@@ -13,7 +13,7 @@ const dishSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600870552/photos/default.jpg",
+      default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899936/photos/default-marmita.jpg",
     },
     description: String,
     userId: mongoose.ObjectId,
