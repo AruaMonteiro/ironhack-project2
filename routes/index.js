@@ -2,6 +2,7 @@ const express = require("express");
 const { deserializeUser } = require("passport");
 const router = express.Router();
 const User = require("../models/User.model");
+const Dish = require("../models/Dish.model");
 
 const fileUploader = require("../configs/cloudinary.config");
 
@@ -38,7 +39,7 @@ router.post("/profile", fileUploader.single("imageUrl"), async (req, res) => {
   try {
     const result = await User.updateOne(
       { _id: req.user.id },
-      { $set: req.body }
+      { $set: req.body, image }
     );
     res.redirect("/profile");
   } catch (error) {
@@ -49,7 +50,8 @@ router.post("/profile", fileUploader.single("imageUrl"), async (req, res) => {
 router.get("/detalhes/:id", async (req, res) => {
   try {
     const result = await User.findOne({ _id: req.params.id });
-    res.render("detalhes.hbs", result);
+    const pratos = await Dish.find({ userId: req.params.id });
+    res.render("detalhes.hbs", { result, pratos });
   } catch (error) {
     console.error(error);
   }
