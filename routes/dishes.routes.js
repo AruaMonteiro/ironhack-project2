@@ -29,12 +29,17 @@ router.post("/add-dish", fileUploader.single("imageUrl"), async (req, res) => {
   if (req.file) {
     image = req.file.url;
   } else {
-    image = "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899936/photos/default-marmita.jpg";
+    image =
+      "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899936/photos/default-marmita.jpg";
   }
 
   try {
     // Create dish in db
-    const result = await Dish.create({ ...req.body, image, userId: req.user._id });
+    const result = await Dish.create({
+      ...req.body,
+      image,
+      userId: req.user._id,
+    });
 
     // Redirect to login form
     res.redirect("/list-dishes");
@@ -69,20 +74,27 @@ router.get("/edit-dish/:id", async (req, res) => {
   }
 });
 
-router.post("/edit-dish/:id", fileUploader.single("imageUrl"), async (req, res) => {
-  let image;
-  if (req.file) {
-    image = req.file.url;
-  } else {
-    image = req.body.existingImage;
+router.post(
+  "/edit-dish/:id",
+  fileUploader.single("imageUrl"),
+  async (req, res) => {
+    let image;
+    if (req.file) {
+      image = req.file.url;
+    } else {
+      image = req.body.existingImage;
+    }
+    console.log(req.body);
+    try {
+      const result = await Dish.updateOne(
+        { _id: req.params.id },
+        { $set: req.body, image }
+      );
+      res.redirect("/list-dishes");
+    } catch (error) {
+      console.error(error);
+    }
   }
-  console.log(req.body);
-  try {
-    const result = await Dish.updateOne({ _id: req.params.id }, { $set: req.body, image });
-    res.redirect("/list-dishes");
-  } catch (error) {
-    console.error(error);
-  }
-});
+);
 
 module.exports = router;
