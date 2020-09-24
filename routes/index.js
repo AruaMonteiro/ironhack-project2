@@ -57,4 +57,19 @@ router.get("/detalhes/:id", async (req, res) => {
   }
 });
 
+//search bar
+
+router.post("/search", async (req, res, next) => {
+  const search = req.body.searchInput;
+  const regex = new RegExp(`.*${search}.*`, "i");
+  console.log(regex);
+  try {
+    const result = await User.find({ category: regex });
+    console.log(result);
+    res.render("marmitas", { result });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
