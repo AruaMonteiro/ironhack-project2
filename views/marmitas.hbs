@@ -14,12 +14,16 @@
 <!--Search Bar-->
 
 <div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="Pesquisar por categoria">
+  <form action="/search" method="POST"> 
+   <div class="search"> 
+    <label for="inputMarmitas"></label>
+      <input type="text" class="searchTerm" name="searchInput" placeholder="Pesquisar por categoria (ex: comida brasileira)">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
+     
    </div>
+   </form>
 </div>
 
 </div> <!-- div da primeira div -->

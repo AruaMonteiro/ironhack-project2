@@ -1,20 +1,20 @@
 /* DETALHES RESTAURANTE */
 
-/* * {
-  box-sizing: border-box;
+* {
+  box-sizing: border-box; /**/
 }
 body {
-  margin: 0;
-} */
+  margin: 0; /**/
+}
 
 .container-width {
   width: 100%;
-  /* max-width: 1150px; */
-  /* margin: 0 auto; */
+  max-width: 1150px; /**/
+  margin: 0 auto; /**/
 }
 .flex-sect {
   background-color: #f4a261;
-  /* padding: 70px 0; */
+  padding: 70px 0; /* */
   font-family: "Kumbh Sans", sans-serif;
 }
 .flex-title {
@@ -28,10 +28,10 @@ body {
 .form {
   border-radius: 20px;
   border: 3px solid #264653;
-  /* padding: 20px 15px; */
+  padding: 20px 15px;
   padding-left: 40px;
   padding-right: 40px;
-  background-color: transparent; /*rgba(0, 0, 0, 0.2);*/
+  background-color: transparent;
   margin-right: 30px;
 }
 .input {
@@ -86,11 +86,12 @@ body {
   flex-grow: 1;
   flex-basis: 100%;
 }
+
 #i3m4 {
   color: black;
   width: 400px;
   float: inline-end;
-  display: flex; /*block*/
+  display: block; /*flex*/
   position: relative;
   padding-top: 20px;
   border-radius: 40px;
