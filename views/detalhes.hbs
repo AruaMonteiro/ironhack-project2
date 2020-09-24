@@ -3,18 +3,18 @@
 
     <section id="il0ci" class="flex-sect" style="background-color: #f4a261">
       <div class="container-width" id="imbl">
-        <div id="ifx49" class="flex-title">{{name}}</div>
+        <div id="ifx49" class="flex-title">{{result.name}}</div>
       </div>
       <div class="row" id="i0ja">
         <div class="cell" id="i96j">
           <center><img
             id="i3m4"
-            src="{{image}}"
-          alt="imagem principal do restaurante {{name}}" /></center>
+            src="{{result.image}}"
+          alt="imagem principal do restaurante {{result.name}}" /></center>
           <div id="iqvl">
             <br>
             <center><span id="i2fdj"
-              >{{description}}</span
+              >{{result.description}}</span
             ></center>
           </div>
         </div>
@@ -26,19 +26,19 @@
             <div>
               <br />
             </div>
-            Categoria(s): {{category}}
+            Categoria(s): {{result.category}}
             <div>
               <br />
             </div>
-            <div>Região de Entrega: {{region}}</div>
+            <div>Região de Entrega: {{result.region}}</div>
             <div>
               <br />
             </div>
-            <div>Website: <a href="https://{{site}}" target="_blank" class="contatos">{{site}}</a></div>
+            <div>Website: <a href="https://{{result.site}}" target="_blank" class="contatos">{{result.site}}</a></div>
             <div>
               <br />
             </div>
-            <div>WhatsApp: <a href="https://wa.me/55{{phone}}" target="_blank" class="contatos">{{phone}}</a></div>
+            <div>WhatsApp: <a href="https://wa.me/55{{result.phone}}" target="_blank" class="contatos">{{result.phone}}</a></div>
           </div>
           <hr />
           <br />
@@ -79,18 +79,19 @@ Olá! Encontrei seu restaurante no Iron Quentinha e gostaria de mais informaçõ
           Veja abaixo os pratos disponíveis neste restaurante
         </div>
         <div class="cards">
+          {{#each pratos}}
           <div class="card">
-            <div class="card-header"></div>
+            <div class="card-header" style="background-image: url('{{this.image}}');"></div>
             <div class="card-body">
-              <div class="card-title" id="ix41s">Dish Name</div>
-              <div class="card-sub-title">R$ XX</div>
+              <div class="card-title" id="ix41s">{{this.name}}</div>
+              <div class="card-sub-title">R$ {{this.price}}</div>
               <div class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
+                {{this.description}}
               </div>
             </div>
           </div>
-          <div class="card">
+          {{/each}}
+          {{!-- <div class="card">
             <div class="card-header ch2" id="ioxs1"></div>
             <div class="card-body">
               <div class="card-title">Title two</div>
@@ -144,7 +145,7 @@ Olá! Encontrei seu restaurante no Iron Quentinha e gostaria de mais informaçõ
                 eiusmod tempor incididunt ut labore
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </section>

@@ -35,7 +35,8 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899525/photos/default-restaurant.png",
+      default:
+        "https://res.cloudinary.com/dv4g4kubs/image/upload/v1600899525/photos/default-restaurant.png",
     },
     category: [String],
     description: {

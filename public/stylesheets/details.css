@@ -117,11 +117,11 @@ body {
 #itagz {
   padding: 10px;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .row {
     flex-wrap: wrap;
   }
-} */
+}
 
 .contatos {
   color: black;
@@ -187,11 +187,11 @@ body {
 }
 .card-header {
   height: 155px;
-  background-image: url("//placehold.it/350x250/78c5d6/fff/image1.jpg");
+  /* background-image: url("//placehold.it/350x250/78c5d6/fff/image1.jpg"); */
   background-size: cover;
   background-position: center center;
 }
-.card-header.ch2 {
+/* .card-header.ch2 {
   background-image: url("//placehold.it/350x250/459ba8/fff/image2.jpg");
 }
 .card-header.ch3 {
@@ -205,7 +205,7 @@ body {
 }
 .card-header.ch6 {
   background-image: url("//placehold.it/350x250/e868a2/fff/image6.jpg");
-}
+} */
 .card-body {
   padding: 15px 15px 5px 15px;
   color: #555;
